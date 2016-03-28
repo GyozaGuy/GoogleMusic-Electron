@@ -88,6 +88,10 @@ APP.on('ready', () => {
   sysTray.setToolTip(APPNAME);
   sysTray.setContextMenu(contextMenu);
 
+  sysTray.on('click', () => {
+    showAndCenter(mainWindow);
+  });
+
   mainWindow = createMainWindow();
 
   const PAGE = mainWindow.webContents;
