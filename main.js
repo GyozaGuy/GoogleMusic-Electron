@@ -15,9 +15,6 @@ const APPNAME = APP.getName();
 const BROWSERWINDOW = ELECTRON.BrowserWindow;
 const APPICON = PATH.join(__dirname, 'images', 'app.png');
 const IPC = ELECTRON.ipcMain;
-
-ELECTRON.crashReporter.start();
-
 var mainWindow;
 var sysTray;
 var isQuitting = false;
