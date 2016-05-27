@@ -79,11 +79,14 @@ if (shouldQuit) {
 // app.commandLine.appendSwitch('proxy-server', 'localhost:8118');
 
 app.on('ready', () => {
-  sysTray = new Tray(appIcon);
+  // Create context menu
   var contextMenu = Menu.buildFromTemplate([
     { label: 'Show', click: function() { showAndCenter(mainWindow); } },
     { label: 'Quit', click: function() { app.quit(); } }
   ]);
+
+  // Create system tray icon
+  sysTray = new Tray(appIcon);
   sysTray.setToolTip(appName);
   sysTray.setContextMenu(contextMenu);
 
