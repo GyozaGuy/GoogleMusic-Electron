@@ -76,6 +76,8 @@ if (shouldQuit) {
   return;
 }
 
+// APP.commandLine.appendSwitch('proxy-server', 'localhost:8118');
+
 APP.on('ready', () => {
   sysTray = new TRAY(APPICON);
   var contextMenu = MENU.buildFromTemplate([
